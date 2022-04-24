@@ -15,7 +15,7 @@ set nocompatible
 set encoding=UTF-8
 set termguicolors
 " Highlight curcur
-set cursorcolumn
+" set cursorcolumn
 set cursorline
 " Max pattern match memory
 set maxmempattern=5000
@@ -31,3 +31,10 @@ set relativenumber
 
 set ignorecase
 set smartcase
+
+" tab config
+set ts=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
