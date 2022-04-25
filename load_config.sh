@@ -3,6 +3,7 @@ echo "start installing"
 VIMRC="${HOME}/.vimrc"
 CONFIG_DIR="${HOME}/.config"
 NVIM_CONFIG_DIR="${CONFIG_DIR}/nvim"
+VIM_CONFIG_DIR="${HOME}/.vim"
 INIT_VIM="init.vim"
 ROOT_DIR=$(pwd)
 REPO_NVIM_DIR="${ROOT_DIR}/nvim"
@@ -26,6 +27,12 @@ fi
 
 ln -s "${NVIM_CONFIG_DIR}/${INIT_VIM}" "${VIMRC}"
 
+# link .vim directory
+if [ -d "${VIM_CONFIG_DIR}" ]; then 
+    echo "${VIM_CONFIG_DIR} exists, now delete it"
+    rm -r "${VIM_CONFIG_DIR}"
+fi
+ln -s "${NVIM_CONFIG_DIR}" "${VIM_CONFIG_DIR}"
 
 # soft link the vim dir to the dotfile
 echo "new config installed"
