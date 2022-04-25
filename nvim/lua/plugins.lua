@@ -1,6 +1,6 @@
 return require('packer').startup(function()
     -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    use '~/.vim/plugins/packer.nvim'
 
     -- zephyr-nvim
     use '~/.vim/plugins/zephyr-nvim'
