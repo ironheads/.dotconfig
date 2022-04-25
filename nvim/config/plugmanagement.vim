@@ -1,2 +1,4 @@
 " use packer to manage plugins
-lua require('plugins')
+if has('nvim')
+    lua require('plugins')
+endif

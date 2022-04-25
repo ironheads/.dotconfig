@@ -41,5 +41,8 @@ set timeoutlen=700
 
 " set the background and colorscheme
 set background=dark
-colorscheme zephyr
+
+if has("nvim")
+    colorscheme zephyr
+endif
 

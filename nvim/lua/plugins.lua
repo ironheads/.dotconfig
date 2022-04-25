@@ -7,4 +7,7 @@ return require('packer').startup(function()
 
     -- nord theme
     use '~/.vim/plugins/nord.nvim'
+
+    -- coc.nvim
+    use { 'neoclide/coc.nvim', branch='release'}
 end)
