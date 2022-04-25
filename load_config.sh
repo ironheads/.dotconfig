@@ -1,14 +1,11 @@
 #!/bin/bash
 
-ROOT_DIR=$(dirname $0)
 echo "start installing"
 echo "git pulling..."
-echo "ROOT DIR is ${ROOT_DIR}"
-cd "${ROOT_DIR}"
 git pull
 git submodule update --init --recursive
 
-
+ROOT_DIR=$(pwd)
 VIMRC="${HOME}/.vimrc"
 CONFIG_DIR="${HOME}/.config"
 NVIM_CONFIG_DIR="${CONFIG_DIR}/nvim"
@@ -20,7 +17,7 @@ if [ ! -d "${CONFIG_DIR}" ]; then
     echo "${CONFIG_DIR} does not exist, now create one"
     mkdir "${CONFIG_DIR}"
 fi
-if [ -d "${NVIM_CONFIG_DIR}" ]; then
+if [ -d "${NVIM_CONFIG_DIR}" ] || [ -L "${NVIM_CONFIG_DIR}" ]; then
     echo "${NVIM_CONFIG_DIR} exists, now delete it"
     rm -r "${NVIM_CONFIG_DIR}"
 fi
@@ -36,7 +33,7 @@ fi
 ln -s "${NVIM_CONFIG_DIR}/${INIT_VIM}" "${VIMRC}"
 
 # link .vim directory
-if [ -d "${VIM_CONFIG_DIR}" ]; then 
+if [ -d "${VIM_CONFIG_DIR}" ] || [ -L "${VIM_CONFIG_DIR}" ]; then 
     echo "${VIM_CONFIG_DIR} exists, now delete it"
     rm -r "${VIM_CONFIG_DIR}"
 fi
@@ -48,7 +45,7 @@ ln -s "${NVIM_CONFIG_DIR}" "${VIM_CONFIG_DIR}"
 PACKER_REPO="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
 if [ -d "${PACKER_REPO}" ]; then
     echo "${PACKER_REPO} exists, delete it;"
-    rm "${PACKER_REPO}"
+    rm -rf "${PACKER_REPO}"
 fi
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim "${PACKER_REPO}"
