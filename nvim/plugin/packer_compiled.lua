@@ -69,10 +69,20 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "/home/sunzhangliang/.vim/plugins/nord.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/packer.nvim",
-    url = "https://github.com/wbthomason/packer.nvim"
+    url = "/home/sunzhangliang/.vim/plugins/packer.nvim"
+  },
+  ["zephyr-nvim"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
+    url = "/home/sunzhangliang/.vim/plugins/zephyr-nvim"
   }
 }
 

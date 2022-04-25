@@ -48,8 +48,7 @@ if [ -d "${PACKER_REPO}" ]; then
     rm -rf "${PACKER_REPO}"
 fi
 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim "${PACKER_REPO}"
-
+ln -s "${REPO_NVIM_DIR}/plugins/packer.nvim" "${PACKER_REPO}"
 
 # soft link the vim dir to the dotfile
 echo "new config installed"
