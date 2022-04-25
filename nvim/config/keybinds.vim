@@ -43,3 +43,21 @@ nmap <s-tab> V<
 vmap <tab> >gv
 vmap <s-tab> <gv
 
+" select all keymap
+map <leader>sa ggVG"
+
+" use keymap to move to the s/t of the line when normal mode
+nnoremap H ^      
+nnoremap L $
+
+" use Y to yark the line start form the cursor
+vnoremap Y y$
+
+" use U to redo the undoes
+nnoremap U <C-r>
+
+" use <leader>/ to unhighlight the string found
+vnoremap <silent><leader>/ :nohls<CR>
+nnoremap <silent><leader>/ :nohls<CR>
+
+
