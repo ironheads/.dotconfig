@@ -1,11 +1,19 @@
 #!/bin/bash
+
+ROOT_DIR=$(dirname $0)
 echo "start installing"
+echo "git pulling..."
+echo "ROOT DIR is ${ROOT_DIR}"
+cd "${ROOT_DIR}"
+git pull
+git submodule update --init --recursive
+
+
 VIMRC="${HOME}/.vimrc"
 CONFIG_DIR="${HOME}/.config"
 NVIM_CONFIG_DIR="${CONFIG_DIR}/nvim"
 VIM_CONFIG_DIR="${HOME}/.vim"
 INIT_VIM="init.vim"
-ROOT_DIR=$(pwd)
 REPO_NVIM_DIR="${ROOT_DIR}/nvim"
 # link init.vim
 if [ ! -d "${CONFIG_DIR}" ]; then
@@ -33,6 +41,18 @@ if [ -d "${VIM_CONFIG_DIR}" ]; then
     rm -r "${VIM_CONFIG_DIR}"
 fi
 ln -s "${NVIM_CONFIG_DIR}" "${VIM_CONFIG_DIR}"
+
+
+# try to add plugin manager
+# add packer.lua to manage plugins
+PACKER_REPO="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
+if [ -d "${PACKER_REPO}" ]; then
+    echo "${PACKER_REPO} exists, delete it;"
+    rm "${PACKER_REPO}"
+fi
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim "${PACKER_REPO}"
+
 
 # soft link the vim dir to the dotfile
 echo "new config installed"

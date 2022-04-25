@@ -1,0 +1,9 @@
+[submodule "nvim/plugins/zephyr-nvim"]
+	path = nvim/plugins/zephyr-nvim
+	url = git@github.com:glepnir/zephyr-nvim.git
+[submodule "nvim/plugins/nord.nvim"]
+	path = nvim/plugins/nord.nvim
+	url = git@github.com:shaunsingh/nord.nvim.git
+[submodule "nvim/plugins/packer.nvim"]
+	path = nvim/plugins/packer.nvim
+	url = git@github.com:wbthomason/packer.nvim.git

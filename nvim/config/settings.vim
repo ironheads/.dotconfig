@@ -39,3 +39,7 @@ set backspace=indent,eol,start " backspace over everything in insert mode
 " time in milliseconds to wait for a mapped sequence to complete
 set timeoutlen=700
 
+" set the background and colorscheme
+set background=dark
+colorscheme zephyr
+
