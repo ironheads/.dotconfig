@@ -3,8 +3,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- zephyr-nvim
-    use 'glepnir/zephyr-nvim'
+    use '~/.vim/plugins/zephyr-nvim'
 
     -- nord theme
-    use 'shaunsingh/nord.nvim'
+    use '~/.vim/plugins/nord.nvim'
 end)
