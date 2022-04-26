@@ -7,3 +7,18 @@
 [submodule "nvim/plugins/packer.nvim"]
 	path = nvim/plugins/packer.nvim
 	url = git@github.com:wbthomason/packer.nvim.git
+[submodule "nvim/plugins/coc.nvim"]
+	path = nvim/plugins/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
+[submodule "nvim/plugins/nvim-tree.lua"]
+	path = nvim/plugins/nvim-tree.lua
+	url = git@github.com:kyazdani42/nvim-tree.lua.git
+[submodule "nvim/plugins/nvim-web-devicons"]
+	path = nvim/plugins/nvim-web-devicons
+	url = git@github.com:kyazdani42/nvim-web-devicons.git
+[submodule "nvim/plugins/bufferline.nvim"]
+	path = nvim/plugins/bufferline.nvim
+	url = git@github.com:akinsho/bufferline.nvim.git
+[submodule "nvim/plugins/nvim-treesitter"]
+	path = nvim/plugins/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git

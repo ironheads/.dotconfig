@@ -69,15 +69,35 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "/home/sunzhangliang/.vim/plugins/bufferline.nvim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
+    url = "/home/sunzhangliang/.vim/plugins/coc.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
     path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "/home/sunzhangliang/.vim/plugins/nord.nvim"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "/home/sunzhangliang/.vim/plugins/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "/home/sunzhangliang/.vim/plugins/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "/home/sunzhangliang/.vim/plugins/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
