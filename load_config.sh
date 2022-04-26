@@ -42,13 +42,17 @@ ln -s "${NVIM_CONFIG_DIR}" "${VIM_CONFIG_DIR}"
 
 # try to add plugin manager
 # add packer.lua to manage plugins
-PACKER_REPO="${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim"
+PACKER_FATHER_REPO="${HOME}/.local/share/nvim/site/pack/packer/start"
+PACKER_REPO="${PACKER_FATHER_REPO}/packer.nvim"
 if [ -d "${PACKER_REPO}" ]; then
     echo "${PACKER_REPO} exists, delete it;"
     rm -rf "${PACKER_REPO}"
 fi
 
+mkdir -p ${PACKER_FATHER_REPO}
+
 ln -s "${REPO_NVIM_DIR}/plugins/packer.nvim" "${PACKER_REPO}"
 
 # soft link the vim dir to the dotfile
 echo "new config installed"
+

@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/sunzhangliang/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/sunzhangliang/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/sunzhangliang/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/sunzhangliang/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/sunzhangliang/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/ironhead/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/ironhead/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/ironhead/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/ironhead/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/ironhead/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,43 +71,43 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "/home/sunzhangliang/.vim/plugins/bufferline.nvim"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "/Users/ironhead/.vim/plugins/bufferline.nvim"
   },
   ["coc.nvim"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "/home/sunzhangliang/.vim/plugins/coc.nvim"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "/Users/ironhead/.vim/plugins/coc.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "/home/sunzhangliang/.vim/plugins/nord.nvim"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "/Users/ironhead/.vim/plugins/nord.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "/home/sunzhangliang/.vim/plugins/nvim-tree.lua"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "/Users/ironhead/.vim/plugins/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "/home/sunzhangliang/.vim/plugins/nvim-treesitter"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "/Users/ironhead/.vim/plugins/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "/home/sunzhangliang/.vim/plugins/nvim-web-devicons"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "/Users/ironhead/.vim/plugins/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/packer.nvim",
-    url = "/home/sunzhangliang/.vim/plugins/packer.nvim"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "/Users/ironhead/.vim/plugins/packer.nvim"
   },
   ["zephyr-nvim"] = {
     loaded = true,
-    path = "/home/sunzhangliang/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
-    url = "/home/sunzhangliang/.vim/plugins/zephyr-nvim"
+    path = "/Users/ironhead/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
+    url = "/Users/ironhead/.vim/plugins/zephyr-nvim"
   }
 }
 
