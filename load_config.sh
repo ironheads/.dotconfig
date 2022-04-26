@@ -53,6 +53,14 @@ mkdir -p ${PACKER_FATHER_REPO}
 
 ln -s "${REPO_NVIM_DIR}/plugins/packer.nvim" "${PACKER_REPO}"
 
+# add new git ignore config
+if [ -L "${HOME}/.gitignore_global" ] || [ -f "${HOME}/.gitignore_global" ]; then
+    echo "${HOME}/.gitignore_global exists, delete it"
+    rm "${HOME}/.gitignore_global"
+fi
+ln -s "${ROOT_DIR}/.gitignore_global" "${HOME}/.gitignore_global"
+git config --global core.excludesFile '~/.gitignore'
+
 # soft link the vim dir to the dotfile
 echo "new config installed"
 

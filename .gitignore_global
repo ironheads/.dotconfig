@@ -1,0 +1,10 @@
+.DS_Store
+*.o
+*~
+.*.swap
+.idea/
+.settings
+out/
+*.iml
+node_modules/
+yarn.lock
